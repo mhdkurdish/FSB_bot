@@ -59,7 +59,7 @@ def _check_member(client, message):
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
         except ChatAdminRequired:
-          sent_message.edit("❗ **من ئەدمین نیم لێرەدا.**\n__Make me admin with ban user permission and add me again.\n#Leaving this chat...__")
+          sent_message.edit("❗ ** ئەدمین نیم لێرەدا.**\n__Make me admin with ban user permission and add me again.\n#Leaving this chat...__")
           client.leave_chat(chat_id)
       except ChatAdminRequired:
         client.send_message(chat_id, text=f"❗ **I am not an admin in @{channel}**\n__Make me admin in the channel and add me again.\n#Leaving this chat...__")
