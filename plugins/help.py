@@ -8,7 +8,6 @@ logging.basicConfig(level=logging.INFO)
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
 def _start(client, message):
     client.send_message(message.chat.id,
-        photo_url="https://telegra.ph/file/c934a8b82dc2963b6de45.jpg",
         text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
         parse_mode="markdown",
         reply_to_message_id=message.message_id
